@@ -8,7 +8,7 @@
 
 Our validator ensures that passwords adhere to the following rules to maximize their strength:
 
-- **Length**: Passwords must be **at least 12 characters long**.
+- **Length**: Passwords must be **at least 8 characters long**.
 - **Case Sensitivity**: At least **one uppercase letter** and **one lowercase letter** are required.
 - **Numeric Inclusion**: Must include at least **one digit**.
 - **Special Characters**: Must contain one of the following: `@#$%^&+=!`.
