@@ -3,9 +3,9 @@ package com.sinanotc.passwordvalidator;
 import com.cthiebaud.passwordvalidator.*;
 
 /**
- * This class implements the PasswordValidator interface and provides a custom
- * password validation. The password must meet several criteria: length, case,
- * digits, special characters, and an Instagram name.
+ * Implements custom password validation based on multiple security criteria.
+ * Validation includes checks for length, character types, numeric digits,
+ * special characters, and a predefined unique identifier.
  */
 public class PasswordValidatorPremium implements PasswordValidator {
 
@@ -14,11 +14,11 @@ public class PasswordValidatorPremium implements PasswordValidator {
     private static final String TEACHER_INSTAGRAM = "cthiebaud"; // Special character regex
 
     /**
-     * Validates a given password based on predefined criteria.
+     * Checks the given password against specified security criteria.
      *
-     * @param password the password to validate
-     * @return a ValidationResult object indicating whether the password is
-     * valid or not.
+     * @param passwordToCheck the password string to be validated
+     * @return a ValidationResult object indicating whether the password meets
+     * the required conditions.
      */
     public ValidationResult validate(String password) {
         if (password == null || password.isEmpty()) {

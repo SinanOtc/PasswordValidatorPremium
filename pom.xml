@@ -24,8 +24,9 @@
     </developers>
 
     <scm>
-        <url>https://github.com/Albra12/SonateSecure</url>
-        <connection>scm:git:https://github.com/Albra12/SonateSecure.git</connection> //später <developerConnection>scm:git:git@github.com:Albra12/SonateSecure.git</developerConnection>
+        <url>https://github.com/SinanOtc/PremiumPasswordValidator</url>
+        <connection>scm:git:https://github.com/SinanOtc/PasswordValidatorPremium.git</connection>
+        <developerConnection>scm:git:git@github.com:SinanOtc/PasswordValidatorPremium.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 

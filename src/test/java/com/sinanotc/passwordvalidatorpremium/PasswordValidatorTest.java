@@ -1,19 +1,19 @@
-package com.kevalbra;
+package com.sinanotc;
 
-import com.kevalbra.sonatesecure.*;
+import com.sinanotc.passwordvalidatorpremium.*;
 import com.cthiebaud.passwordvalidator.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SonateSecureTest {
+public class PasswordValidatorPremiumTest {
 
-    private static SonateSecure validator;
+    private static PasswordValidatorPremium validator;
 
     @BeforeAll
     public static void setup() {
-        validator = new SonateSecure();
+        validator = new PasswordValidatorPremium();
     }
 
     @Test
@@ -31,49 +31,42 @@ public class SonateSecureTest {
     }
 
     @Test
-    public void testMissingTeacherInstagram() {
-        ValidationResult result = validator.validate("Valid1!Pass");
-        assertFalse(result.isValid());
-        assertTrue(result.message().contains("cthiebaud"));
-    }
-
-    @Test
     public void testShortPassword() {
-        ValidationResult result = validator.validate("cthie1!");
+        ValidationResult result = validator.validate("sinan!");
         assertFalse(result.isValid());
         assertEquals("Password must be at least 8 characters long.", result.message());
     }
 
     @Test
     public void testMissingUppercase() {
-        ValidationResult result = validator.validate("cthiebaud1!");
+        ValidationResult result = validator.validate("harischmarn!");
         assertFalse(result.isValid());
         assertEquals("Password must contain at least one uppercase letter.", result.message());
     }
 
     @Test
     public void testMissingLowercase() {
-        ValidationResult result = validator.validate("CTHIEBAUD1!");
+        ValidationResult result = validator.validate("HARISCHMARN!");
         assertFalse(result.isValid());
         assertEquals("Password must contain at least one lowercase letter.", result.message());
     }
 
     @Test
     public void testMissingDigit() {
-        ValidationResult result = validator.validate("Cthiebaud!");
+        ValidationResult result = validator.validate("Harischmarnpupsi!");
         assertFalse(result.isValid());
         assertEquals("Password must contain at least one digit.", result.message());
     }
 
     @Test
     public void testMissingSpecialCharacter() {
-        ValidationResult result = validator.validate("Cthiebaud1");
+        ValidationResult result = validator.validate("Harischmarn1");
         assertFalse(result.isValid());
         assertEquals("Password must contain at least one special character.", result.message());
     }
 
     public void testValidPassword() {
-        String validPassword = "Cthiebaud1!";
+        String validPassword = "Harischamrn1!";
 
         ValidationResult result = validator.validate(validPassword);
         assertTrue(result.isValid(), "Password should be valid.");
