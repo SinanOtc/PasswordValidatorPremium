@@ -1,13 +1,14 @@
-package com.sinanotc;
+package com.sinanotc.passwordvalidator;
 
-import com.sinanotc.passwordvalidatorpremium.*;
-import com.cthiebaud.passwordvalidator.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.cthiebaud.passwordvalidator.ValidationResult;
 
-public class PasswordValidatorPremiumTest {
+public class PasswordValidatorTest {
 
     private static PasswordValidatorPremium validator;
 
@@ -65,8 +66,9 @@ public class PasswordValidatorPremiumTest {
         assertEquals("Password must contain at least one special character.", result.message());
     }
 
+    @Test
     public void testValidPassword() {
-        String validPassword = "Harischamrn1!";
+        String validPassword = "Harischmarn1!";
 
         ValidationResult result = validator.validate(validPassword);
         assertTrue(result.isValid(), "Password should be valid.");

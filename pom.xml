@@ -60,7 +60,7 @@
 
     <repositories>
         <repository>
-            <id>athenaeum-brew-maven-repo</id>
+            <id>github-repo</id>
             <url>https://maven.pkg.github.com/athenaeum-brew/maven-repo</url>
             <releases>
                 <enabled>true</enabled>
